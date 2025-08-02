@@ -16,7 +16,6 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #ffffff00;
-    font-family: 'Arial', sans-serif;
     flex-direction: column;
     width: 100%;
 	position: absolute;
