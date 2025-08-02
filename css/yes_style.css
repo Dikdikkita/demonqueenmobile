@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(94, 0, 132, 0.4), rgba(0, 0, 0, 0.9));
+  z-index: 1;
+}
+
+.container {
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.header_text {
+  font-size: 2.5em;
+  color: #d936d9;
+  text-shadow: 0 0 10px #d936d9, 0 0 20px #ff00cc;
+  font-family: 'Cinzel Decorative', cursive;
+  animation: glow 3s ease-in-out infinite alternate;
+  margin-bottom: 20px;
+}
+
+.sub_text {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #bbb;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.gif_container img {
+  max-width: 300px;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff00cc;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #d936d9, 0 0 10px #d936d9;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff00cc, 0 0 40px #ff00cc;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px #ff00cc;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #ff00cc;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
